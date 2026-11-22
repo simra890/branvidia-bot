@@ -1,26 +1,141 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  color-scheme: dark;
+
+  /* Flip the grey scale: light text on dark surfaces */
+  --color-gray-50: #08080a;
+  --color-gray-100: #1c1c21;
+  --color-gray-200: #2a2a31;
+  --color-gray-300: #3f3f46;
+  --color-gray-400: #71717a;
+  --color-gray-500: #a1a1aa;
+  --color-gray-600: #b4b4bc;
+  --color-gray-700: #d4d4d8;
+  --color-gray-800: #e4e4e7;
+  --color-gray-900: #fafafa;
+
+  /* Dark tints for coloured badges and cards */
+  --color-purple-50: #140a24;
+  --color-purple-100: #24123f;
+  --color-purple-200: #3b1d63;
+  --color-green-50: #04230f;
+  --color-green-100: #0f3d1f;
+  --color-red-50: #2a0b0b;
+  --color-red-100: #4a1010;
+  --color-amber-100: #4a2a05;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+html {
+  scroll-behavior: smooth;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background: #000000;
+  color: #f4f4f5;
+}
+
+::selection {
+  background: #6b21a8;
+  color: #ffffff;
+}
+
+/* Cards, chat window, header */
+.bg-white {
+  background-color: #101014;
+}
+.bg-white\/80 {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+button.bg-white:hover,
+a.bg-white:hover {
+  background-color: #1c1c21;
+}
+
+/* Hero gradient and glow blobs */
+.to-white {
+  --tw-gradient-to: #000000;
+}
+.bg-fuchsia-100\/60 {
+  background-color: rgba(168, 85, 247, 0.12);
+}
+
+/* Text colours that must be lighter on black */
+.text-purple-600,
+.text-purple-700,
+.hover\:text-purple-700:hover {
+  color: #c084fc;
+}
+.text-purple-100 {
+  color: #f3e8ff;
+}
+.text-purple-200 {
+  color: #e9d5ff;
+}
+.text-green-700 {
+  color: #4ade80;
+}
+.text-green-800 {
+  color: #86efac;
+}
+.text-red-600,
+.text-red-700 {
+  color: #f87171;
+}
+.text-amber-700 {
+  color: #fbbf24;
+}
+
+/* Inputs */
+input {
+  background-color: #101014;
+  color: #fafafa;
+}
+input::placeholder {
+  color: #71717a;
+}
+
+/* Score ring track */
+svg circle[stroke="#ede9fe"] {
+  stroke: #2a1747;
+}
+
+@keyframes fade-up {
+  from {
+    opacity: 0;
+    transform: translateY(14px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@keyframes float {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+.animate-fade-up {
+  animation: fade-up 0.55s ease both;
+}
+
+.animate-float {
+  animation: float 6s ease-in-out infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
 }
