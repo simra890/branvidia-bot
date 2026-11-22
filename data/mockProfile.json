@@ -1,0 +1,30 @@
+{
+    "name": "Green Leaf Café",
+    "category": "Coffee shop",
+    "description": "Coffee shop in Bangalore.",
+    "address": "12 MG Road, Bengaluru, Karnataka 560001",
+    "phone": "+91 98765 43210",
+    "website": "",
+    "hours": "Mon-Sat 8am-8pm, Sunday closed",
+    "rating": 4.1,
+    "totalReviews": 128,
+    "photos": {
+      "exterior": 3,
+      "interior": 0,
+      "food": 4,
+      "menu": 0,
+      "team": 0
+    },
+    "reviews": [
+      { "author": "Priya S.", "rating": 5, "text": "Best filter coffee in the area and the staff are so friendly!" },
+      { "author": "Rahul M.", "rating": 4, "text": "Lovely ambience and great cold brew. A bit pricey though." },
+      { "author": "Ananya K.", "rating": 2, "text": "Waited 30 minutes for my order. Service was very slow." },
+      { "author": "Vikram D.", "rating": 5, "text": "Great place to work from. Fast wifi and quiet in the mornings." },
+      { "author": "Sneha R.", "rating": 3, "text": "Coffee is good but the place gets crowded and there's no parking." },
+      { "author": "Arjun P.", "rating": 1, "text": "Found a hair in my sandwich. Staff were not apologetic." },
+      { "author": "Meera T.", "rating": 5, "text": "Loved the brownies. Will come again!" },
+      { "author": "Karan J.", "rating": 4, "text": "Good food, cozy seating. Wish they opened on Sundays." },
+      { "author": "Divya N.", "rating": 2, "text": "Washroom was not clean and the AC was not working." },
+      { "author": "Rohan B.", "rating": 5, "text": "Amazing baristas, the cappuccino is perfect." }
+    ]
+  }
